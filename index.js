@@ -1,13 +1,8 @@
-function subsets(nums) {
-  const result = [];
-  backtrack(0, []);
-  return result;
-  function backtrack(start, current) {
-    result.push([...current]);
-    for (let i = start; i < nums.length; i++) {
-      current.push(nums[i]);
-      backtrack(i + 1, current);
-      current.pop();
+const linearSearch = (arr, target) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      return i;
     }
   }
-}
+  return -1;
+};
